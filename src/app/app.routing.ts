@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2016-2017 VMware, Inc. All Rights Reserved.
+ * Copyright (c) 2016-2018 VMware, Inc. All Rights Reserved.
  * This software is released under MIT license.
  * The full license information can be found in LICENSE in the root directory of this project.
  */
@@ -20,7 +20,7 @@ export const APP_ROUTES: Routes = [
     {path: "color", loadChildren: "app/color/color.demo.module"},
     {path: "datagrid", loadChildren: "app/datagrid/datagrid.demo.module"},
     {path: "dropdown", loadChildren: "app/dropdown/dropdown.demo.module"},
-    {path: "forms", loadChildren: "app/forms/forms.demo.module"},
+    {path: "forms-deprecated", loadChildren: "app/forms-deprecated/forms.demo.module"},
     {path: "grid", loadChildren: "app/grid/grid.demo.module"},
     {path: "iconography", loadChildren: "app/iconography/iconography.demo.module"},
     {path: "images", loadChildren: "app/images/images.demo.module"},
@@ -44,6 +44,7 @@ export const APP_ROUTES: Routes = [
     {path: "tooltips", loadChildren: "app/tooltips/tooltips.demo.module"},
     {path: "typography", loadChildren: "app/typography/typography.demo.module"},
     {path: "vertical-nav", loadChildren: "app/vertical-nav/vertical-nav.demo.module"},
+    {path: "virtual-scroll", loadChildren: "app/virtual-scroll/virtual-scroll.demo.module"},
     {path: "wizard", loadChildren: "app/wizard/wizard.demo.module"}
 ];
 

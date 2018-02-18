@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2016-2017 VMware, Inc. All Rights Reserved.
+ * Copyright (c) 2016-2018 VMware, Inc. All Rights Reserved.
  * This software is released under MIT license.
  * The full license information can be found in LICENSE in the root directory of this project.
  */
@@ -9,6 +9,7 @@ import {RouterModule, Routes} from "@angular/router";
 
 import {KSButtons} from "./containers/buttons/buttons.component";
 import {KSCards} from "./containers/cards/cards.component";
+import {KSCode} from "./containers/code/code.component";
 import {KSColors} from "./containers/colors/colors.component";
 import {KSDatagrid} from "./containers/data/datagrid.component";
 import {KSStackView} from "./containers/data/stackview.component";
@@ -50,6 +51,7 @@ export const routes: Routes = [
     {path: "badges", component: KSBadges, data: {state: "badges"}},
     {path: "buttons", component: KSButtons, data: {state: "buttons"}},
     {path: "cards", component: KSCards, data: {state: "cards"}},
+    {path: "code", component: KSCode, data: {state: "code"}},
     {path: "colors", component: KSColors, data: {state: "colors"}},
     {path: "datagrids", component: KSDatagrid, data: {state: "datagrids"}},
     {path: "stackviews", component: KSStackView, data: {state: "stackviews"}},

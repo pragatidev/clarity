@@ -1,5 +1,11 @@
 #!/usr/bin/env node
 
+/*
+ * Copyright (c) 2016-2018 VMware, Inc. All Rights Reserved.
+ * This software is released under MIT license.
+ * The full license information can be found in LICENSE in the root directory of this project.
+ */
+
 const program = require("commander");
 const shell = require("shelljs");
 const ip = require("ip");
@@ -50,7 +56,7 @@ if (program.update) {
  */
 function runGemini(config) {
     shell.exec("webpack");
-    shell.exec("node_modules/.bin/lite-server --baseDir=dist" , { async: true });
+    let server = shell.exec("node_modules/.bin/lite-server --baseDir=dist" , { async: true });
     let status = shell.exec("docker run --rm --name=clarity_chrome -d -p 4444:4444 selenium/standalone-chrome@sha256:b899f16b6d963600ef6da8a8dd49e311146033ed66cb5af71eccb78ab378e19a");
     let geminiStatus = 0;
     if (status.code === 0) {
@@ -62,5 +68,6 @@ function runGemini(config) {
     } else {
         console.warn("WARNING: Unable to start docker container for gemini. Is docker installed and running on your system?");
     }
+    server.kill();
     process.exit(geminiStatus); // this will kill the process so that the lite-server is killed with the exit code from gemini
 }

@@ -20,8 +20,8 @@ Here are the typical steps in a contributor's workflow:
 - Setup your local environment to run and build Clarity. See our [build documentation](BUILD.md).
 - Make commits of logical units.
 - Make sure `npm test` passes for each of them.
-- Make sure `npm clang` passes for each of them. If not, you can run a gulp task (clang:format) to format your code.
-- Make sure `npm tslint` passes for each of them. If not, you can run a gulp task (tslint:fix) to try to auto-fix some of them.
+- Make sure `npm run clang:check` passes for each of them. If not, you can run `npm run clang:format` to format your code.
+- Make sure `npm run tslint:check` passes for each of them. If not, you can run `npm run tslint:fix` to try to auto-fix some of them.
 For certain lint failures you will have to fix them manually.
 - Make sure your commit messages are in the proper format (see below).
 - Push your changes to a topic branch in your fork of the repository.
@@ -121,14 +121,18 @@ These documents provide guidance creating a well-crafted commit message:
 
 The [Clarity documentation website](https://vmware.github.io/clarity/documentation) is also housed in this repository under the `new-website` branch.  You can contribute to the documentation by submitting pull requests against that branch.
 
+The documentation website is written in Angular using angular-cli.  You can serve the documentation by [installing](https://github.com/angular/angular-cli#installation) angular-cli, checking out the `new-website` branch, and running `npm start`.   
+
 ## Reporting Bugs and Creating Issues
 
 You can submit an issue or a bug to our [GitHub repository](https://github.com/vmware/clarity/issues).  You must provide:
 
 * The link to the reproduction scenario you created using one of the Clarity Plunker Templates
 * If possible please provide a minimal demo illustrating the issue by forking one of the Clarity Plunker Templates
-  - Clarity Version: [Latest - 0.9.x](https://plnkr.co/uNwwZe)
-  - Clarity Version: [Legacy - 0.8.15](https://plnkr.co/8TwwdL)
+  - [Light Theme v11](https://stackblitz.com/edit/clarity-light-theme-v11)
+  - [Dark Theme v11](https://stackblitz.com/edit/clarity-dark-theme-v11)
+  - [Light Theme v10](https://stackblitz.com/edit/clarity-light-theme-v10)
+  - [Dark Theme v10](https://stackblitz.com/edit/clarity-dark-theme-v10)
 * The version number of Angular
 * The version number of Clarity
 * The browser name and version number

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2016-2017 VMware, Inc. All Rights Reserved.
+ * Copyright (c) 2016-2018 VMware, Inc. All Rights Reserved.
  * This software is released under MIT license.
  * The full license information can be found in LICENSE in the root directory of this project.
  */
@@ -7,12 +7,13 @@ import {CommonModule} from "@angular/common";
 import {NgModule} from "@angular/core";
 import {FormsModule} from "@angular/forms";
 
-import {ClarityModule} from "../../clarity-angular/clarity.module";
+import {ClarityModule} from "../../clr-angular/clr-angular.module";
 import {UtilsDemoModule} from "../_utils/utils.module";
 
 import {DatagridBasicStructureDemo} from "./basic-structure/basic-structure";
 import {DatagridBindingPropertiesDemo} from "./binding-properties/binding-properties";
 import {DatagridColumnSizingDemo} from "./column-sizing/column-sizing";
+import {DatagridCompactDemo} from "./compact/compact";
 import {DatagridCustomRenderingDemo} from "./custom-rendering/custom-rendering";
 import {DatagridDemo} from "./datagrid.demo";
 import {ROUTING} from "./datagrid.demo.routing";
@@ -22,6 +23,7 @@ import {DatagridFilteringDemo} from "./filtering/filtering";
 import {DatagridFullDemo} from "./full/full";
 import {DatagridHideShowDemo} from "./hide-show-columns/hide-show";
 import {DatagridKitchenSinkDemo} from "./kitchen-sink/kitchen-sink";
+import {DatagridConditionalPaginationDemo} from "./pagination-conditional/pagination-conditional";
 import {DatagridPaginationScrollingDemo} from "./pagination-scrolling/pagination-scrolling";
 import {DatagridPaginationDemo} from "./pagination/pagination";
 import {DatagridPlaceholderDemo} from "./placeholder/placeholder";
@@ -45,12 +47,14 @@ import {Example} from "./utils/example";
         DatagridDemo,
         DatagridBasicStructureDemo,
         DatagridBindingPropertiesDemo,
+        DatagridCompactDemo,
         DatagridCustomRenderingDemo,
         DatagridFilteringDemo,
         DatagridFullDemo,
         DatagridHideShowDemo,
         DatagridPaginationDemo,
         DatagridPaginationScrollingDemo,
+        DatagridConditionalPaginationDemo,
         DatagridSelectionDemo,
         DatagridSelectionSingleDemo,
         DatagridSelectionRowModeDemo,
@@ -74,11 +78,13 @@ import {Example} from "./utils/example";
         DatagridDemo,
         DatagridBasicStructureDemo,
         DatagridBindingPropertiesDemo,
+        DatagridCompactDemo,
         DatagridCustomRenderingDemo,
         DatagridFilteringDemo,
         DatagridFullDemo,
         DatagridPaginationDemo,
         DatagridPaginationScrollingDemo,
+        DatagridConditionalPaginationDemo,
         DatagridSelectionDemo,
         DatagridSelectionSingleDemo,
         DatagridSelectionRowModeDemo,
